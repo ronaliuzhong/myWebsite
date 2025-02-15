@@ -2,16 +2,19 @@
 <html lang="en">
 
     <!-- Title of webpage in browser -->
+    <!-- Other metadata -->
     <head>
         <title>Rona's Website</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
     <!-- visible content -->
      <body>
-        <h1 style="color: rgb(124, 169, 124)">Rona Liu-Zhong</h1>
+        <h1 style="color: rgb(124, 169, 124)" id="hi">Rona Liu-Zhong</h1>
         <!-- <div style="text-align: center"> -->
             <!--this would center the text-->
-            <h3 style="color: rgb(195, 78, 98)">About Me</h3>
+            <h2 style="color: rgb(195, 78, 98)">About Me</h2>
             <p>
                 Hi! I'm a<strong> computer science</strong> student at Northeastern University.
                 My interests lie in <strong>software development</strong>, and I have a specific interest
@@ -26,7 +29,7 @@
             I'm always looking to learn new skills and expand my horizons 
             (one of these being this very website) and I love a good challenge!
             I currently have experience in 
-            <ul>
+            <ul style="color: brown">
                 <li>Python</li> 
                 <li>Java</li> 
                 <li>Dr. Racket</li> 
@@ -39,7 +42,7 @@
             Outside of my academics, I am an avid <span style="font-size:20px;">Ultimate Frisbee</span> player and
             currently play for the Northeastern Valkyries. Definitely reach out if
             you're a fellow Ultimate player! <br>
-            <img 
+            <img id="#valks"
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWjgJSEPM_VQiCv89uLZme2OjdahKmedil5A&s"
             alt="Northeastern Valkyries 2024 Fall Team Photo"/> <br>
             My team!
@@ -52,7 +55,7 @@
         <h3 style="color: rgb(195, 78, 98)">Links</h3>
         <p>
             Make sure to:
-            <ol>
+            <ol style="color: brown">
                 <li>View my LinkedIn!
                     <a href="https://www.linkedin.com/in/rona-liu-zhong/"
                     target="__blank">My LinkedIn</a> 
@@ -68,7 +71,7 @@
             <!-- the target="__blank" makes it so that the link is opened in a new tab-->
         </p>
         <hr>
-        <label for="fruit">What is your favorite fruit?</label>
+        <label for="fruit" style="color: brown">What is your favorite fruit?</label>
         <select name="fruit" id="fruit">
             <option value="mango">Mango</option>
             <option value="cherries">Cherries</option>
@@ -76,7 +79,20 @@
             <option value="blackberries">Blackberries</option>
             <option value="none">none of these even though they are delicious</option>
         </select>
-        
+
+        <!--I don't think my JavaScript section is working-->
+        <script>
+            // Identifying our image
+            const valks = document.querySelector("#valks");
+            // adding reaction when image is clicksed
+            valks.addEventListener("click", () => {
+                    alert('Hi Valks!');
+                });
+            const hi = document.querySelector("hi");
+            hi.addEventListener("click", () => {
+                alert('Hi!');
+            })
+        </script>
      </body>
 
 </html>
